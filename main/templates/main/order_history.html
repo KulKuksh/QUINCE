@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="container py-4">
+    <h1>Мои заказы</h1>
+    {% if orders %}
+        {% for order in orders %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5>Заказ №{{ order.id }} от {{ order.created_at|date:"d.m.Y H:i" }}</h5>
+                    <p>Статус: <strong>{{ order.get_status_display }}</strong></p>
+                    <p>Сумма: {{ order.total_amount }} ₽ (доставка {{ order.delivery_cost }} ₽)</p>
+                    <p>Адрес: {{ order.address }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>У вас ещё нет заказов.</p>
+    {% endif %}
+</div>
+{% endblock %}

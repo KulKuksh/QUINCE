@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center my-4">Корзина</h1>
+    {% if cart_items %}
+        <div class="cart-table-wrapper">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Блюдо</th>
+                        <th>Количество</th>
+                        <th>Цена</th>
+                        <th>Сумма</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.dish.name }}</td>
+                        <td>
+                            <form method="post" action="{% url 'update_cart' item.id %}" style="display:flex; gap:0.5rem; align-items:center;">
+                                {% csrf_token %}
+                                <input type="number" name="quantity" value="{{ item.quantity }}" min="1" class="form-control" style="width:80px;">
+                                <button type="submit" class="btn-update">Обновить</button>
+                            </form>
+                         </td>
+                        <td>{{ item.dish.price }} ₽</td>
+                        <td>{{ item.get_total }} ₽</td>
+                        <td><a href="{% url 'remove_from_cart' item.id %}" class="btn-remove">Удалить</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Блок итогов по центру -->
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <strong>Итого: {{ total }} ₽</strong>
+                </div>
+                <div class="cart-actions">
+                    <a href="{% url 'clear_cart' %}" class="btn-clear" onclick="return confirm('Очистить всю корзину?');">Очистить корзину</a>
+                    <a href="{% url 'checkout' %}" class="btn-book">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <p class="text-center">Корзина пуста.</p>
+    {% endif %}
+</div>
+{% endblock %}

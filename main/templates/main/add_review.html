@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="form-card">
+    <h2>Оставить отзыв</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Оценка (1-5)</label>
+            <select name="rating" class="form-control">
+                {% for i in "12345" %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Текст отзыва</label>
+            <textarea name="text" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Отправить отзыв</button>
+    </form>
+</div>
+{% endblock %}

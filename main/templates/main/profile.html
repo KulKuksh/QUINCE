@@ -1,0 +1,177 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header">
+        <h1>Профиль: {{ user.username }}</h1>
+    </div>
+
+    <div class="profile-tabs">
+        <button class="tab-btn active" data-tab="orders">Мои заказы</button>
+        <button class="tab-btn" data-tab="reviews">Мои отзывы</button>
+    </div>
+
+    <div id="orders-tab" class="tab-content active">
+        <h2>История заказов</h2>
+        {% if orders %}
+            <div class="orders-list">
+                {% for order in orders %}
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">Заказ №{{ order.id }}</span>
+                            <span class="order-date">{{ order.created_at|date:"d.m.Y H:i" }}</span>
+                            <span class="order-status">{{ order.get_status_display }}</span>
+                        </div>
+                        <div class="order-details">
+                            <p>Сумма: {{ order.total_amount }} ₽ (доставка {{ order.delivery_cost }} ₽)</p>
+                            <p>Адрес: {{ order.address }}</p>
+                            <p>Телефон: {{ order.phone }}</p>
+                            <p>Комментарий: {{ order.comment|default:"—" }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>У вас пока нет заказов.</p>
+        {% endif %}
+    </div>
+
+    <div id="reviews-tab" class="tab-content">
+        <h2>Мои отзывы</h2>
+        {% if reviews %}
+            <div class="reviews-list">
+                {% for review in reviews %}
+                    <div class="review-card">
+                        <div class="review-rating">
+                            {% for i in "12345"|make_list %}
+                                {% if forloop.counter <= review.rating %}
+                                    <i class="bi bi-star-fill" style="color: #F5C542;"></i>
+                                {% else %}
+                                    <i class="bi bi-star" style="color: #ccc;"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <p class="review-text">{{ review.text|linebreaksbr }}</p>
+                        <div class="review-meta">
+                            <span class="review-status">
+                                Статус:
+                                {% if review.status == 'approved' %}Одобрен
+                                {% elif review.status == 'pending' %}На модерации
+                                {% else %}Отклонён
+                                {% endif %}
+                            </span>
+                            <span class="review-date">{{ review.created_at|date:"d.m.Y" }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>Вы ещё не оставили ни одного отзыва.</p>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+    .profile-container {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 0 24px;
+    }
+    .profile-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .profile-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .tab-btn {
+        background: none;
+        border: none;
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 2rem;
+        transition: 0.2s;
+    }
+    .tab-btn.active {
+        background: var(--yellow);
+        color: var(--text-dark);
+        font-weight: 600;
+    }
+    .tab-btn:hover:not(.active) {
+        background: #f0f0f0;
+    }
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    .orders-list, .reviews-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .order-card, .review-card {
+        background: var(--white);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-light);
+    }
+    .order-id {
+        font-weight: bold;
+    }
+    .order-status {
+        background: #e8f4e8;
+        padding: 0.2rem 0.8rem;
+        border-radius: 2rem;
+        font-size: 0.8rem;
+    }
+    .review-rating {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    .review-text {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+    .review-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: #6c757d;
+        margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) {
+        .order-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.dataset.tab;
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(`${tabId}-tab`).classList.add('active');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+</script>
+{% endblock %}

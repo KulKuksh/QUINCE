@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Ресторан <span class="logo-blue">Quince</span> | Новосибирск</h1>
+        <p>Первый ресторан авторской кухни в Новосибирске!</p>
+        <p>Кухня открытого огня от шеф-повара.<br>
+        Печи, хосперы, сюжеты – «Quince» печет и жарит всеми имеющимися способами.<br>
+        В ресторане можно попробовать крафтовый хлеб из собственной пекарни, неаполитанскую пиццу, стейки собственного вызревания.</p>
+        <div class="hero-buttons">
+            <a href="{% url 'menu' %}" class="btn-book">Заказать</a>
+            
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

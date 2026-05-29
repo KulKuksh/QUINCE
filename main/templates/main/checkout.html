@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="form-card">
+    <h2>Оформление заказа</h2>
+    <p>Сумма заказа: <strong>{{ total }} ₽</strong></p>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Адрес доставки</label>
+            <input type="text" name="address" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Телефон</label>
+            <input type="text" name="phone" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Комментарий</label>
+            <textarea name="comment" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Способ получения</label>
+            <div class="radio-group">
+                <label><input type="radio" name="delivery_type" value="delivery_inside"> Доставка по ЖК (бесплатно от 1200 ₽)</label>
+                <label><input type="radio" name="delivery_type" value="delivery_outside"> Доставка за пределы ЖК (200 ₽)</label>
+                <label><input type="radio" name="delivery_type" value="pickup"> Самовывоз (бесплатно)</label>
+            </div>
+        </div>
+        <button type="submit" class="btn-submit">Подтвердить заказ</button>
+    </form>
+</div>
+{% endblock %}

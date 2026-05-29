@@ -1,0 +1,165 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="menu-page">
+    <div class="menu-header">
+        <h1>Меню</h1>
+        <p class="menu-subtitle">Выберите блюда и добавьте в корзину</p>
+        <div class="menu-filters">
+            <button class="filter-btn active" data-category="all">Все</button>
+            {% for cat in categories %}
+                <button class="filter-btn" data-category="{{ cat.slug }}">{{ cat.name }}</button>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="menu-grid" id="dishes-container">
+        {% for dish in dishes %}
+            <div class="dish-card" data-category="{{ dish.category.slug }}">
+                <div class="dish-img">
+                    {% if dish.image %}
+                        <img src="{{ dish.image.url }}" alt="{{ dish.name }}">
+                    {% else %}
+                        <img src="{% static 'main/images/placeholder.jpg' %}" alt="Блюдо">
+                    {% endif %}
+                </div>
+                <div class="dish-body">
+                    <h3>{{ dish.name }}</h3>
+                    <p>{{ dish.description|truncatechars:80 }}</p>
+                    <div class="dish-price-cart">
+                        <span class="price">{{ dish.price }} ₽</span>
+                        <a href="{% url 'add_to_cart' dish.id %}" class="cart-btn">в корзину</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p class="no-dishes">Нет блюд.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .menu-page {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 24px;
+    }
+    .menu-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .menu-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .menu-subtitle {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+    }
+    .menu-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .filter-btn {
+        background: transparent;
+        border: 1px solid #F5C542;
+        padding: 0.5rem 1.5rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.9rem;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+        background: #F5C542;
+        color: #2C3E50;
+    }
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .dish-card {
+        background: #FFFFFF;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+    }
+    .dish-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .dish-img img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .dish-body {
+        padding: 1rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .dish-body h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .dish-body p {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+    }
+    .dish-price-cart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+    .price {
+        font-weight: bold;
+        color: #F5C542;
+        font-size: 1.1rem;
+    }
+    .cart-btn {
+        background: #A8D0E6;
+        color: #2C3E50;
+        padding: 0.3rem 1rem;
+        border-radius: 1.5rem;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: 0.2s;
+    }
+    .cart-btn:hover {
+        background: #F5C542;
+    }
+    .no-dishes {
+        text-align: center;
+        padding: 2rem;
+        color: #6c757d;
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.getAttribute('data-category');
+            document.querySelectorAll('.dish-card').forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+</script>
+{% endblock %}
