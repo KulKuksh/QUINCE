@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container">
-    <h1 class="text-center my-4">Корзина</h1>
+    
     {% if cart_items %}
         <div class="cart-table-wrapper">
             <table class="cart-table">
@@ -46,7 +46,9 @@
             </div>
         </div>
     {% else %}
-        <p class="text-center">Корзина пуста.</p>
+        <div style="text-align: center; padding: 3rem; font-size: 1.2rem;">
+            Корзина пуста.
+         </div>
     {% endif %}
 </div>
 {% endblock %}

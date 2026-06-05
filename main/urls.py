@@ -1,5 +1,13 @@
 from django.urls import path
 from . import views
+from django.contrib.sitemaps.views import sitemap
+from main.sitemaps import DishSitemap, CategorySitemap
+
+sitemaps = {
+    'dishes': DishSitemap,
+    'categories': CategorySitemap,
+}
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -18,4 +26,5 @@ urlpatterns = [
     path('clear-cart/', views.clear_cart, name='clear_cart'),
     path('reviews/', views.reviews, name='reviews'),
     path('profile/', views.profile, name='profile'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]

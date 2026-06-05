@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+     <meta name="description" content="Ресторан авторской кухни Quince в Новосибирске. Доставка, меню, бронирование столиков. Свежие продукты, уютная атмосфера.">
+<meta name="keywords" content="ресторан, доставка еды, меню, Новосибирск, авторская кухня, Quince">
+<meta name="author" content="Quince">
+<!-- Open Graph для соцсетей (Facebook, VK) -->
+<meta property="og:title" content="Quince – Ресторан авторской кухни">
+<meta property="og:description" content="Уютный ресторан в Новосибирске. Попробуйте наши фирменные блюда с доставкой.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:image" content="{% static 'main/img/og-image.jpg' %}">
 </head>
 <body>
     <nav class="navbar">

@@ -1,13 +1,133 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block content %}
-<div class="form-card">
-    <h2>Регистрация</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn-submit">Зарегистрироваться</button>
-    </form>
-    <p class="text-center mt-3">Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></p>
+<div class="register-page">
+    <div class="register-card">
+        <h1>Регистрация</h1>
+        <p class="register-subtitle">Создайте аккаунт, чтобы делать заказы</p>
+
+        <form method="post" class="register-form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="id_username">Имя пользователя</label>
+                <input type="text" name="username" id="id_username" class="form-control" placeholder="Введите имя" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_email">Email</label>
+                <input type="email" name="email" id="id_email" class="form-control" placeholder="example@mail.ru" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_phone">Телефон</label>
+                <input type="tel" name="phone" id="id_phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_password1">Пароль</label>
+                <input type="password" name="password1" id="id_password1" class="form-control" placeholder="Придумайте пароль" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_password2">Подтверждение пароля</label>
+                <input type="password" name="password2" id="id_password2" class="form-control" placeholder="Повторите пароль" required>
+            </div>
+
+            <button type="submit" class="btn-register">Зарегистрироваться</button>
+        </form>
+
+        <p class="login-link">Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></p>
+    </div>
 </div>
+
+<style>
+    .register-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        padding: 2rem;
+        background-color: var(--bg-light, #f8f9fa);
+    }
+    .register-card {
+        background: #FFFFFF;
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 2rem;
+        max-width: 480px;
+        width: 100%;
+        transition: transform 0.2s;
+    }
+    .register-card:hover {
+        transform: translateY(-4px);
+    }
+    .register-card h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        color: var(--deep-blue, #2C3E50);
+    }
+    .register-subtitle {
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+    }
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: #2C3E50;
+    }
+    .form-control {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        transition: all 0.2s;
+    }
+    .form-control:focus {
+        outline: none;
+        border-color: #F5C542;
+        box-shadow: 0 0 0 3px rgba(245,197,66,0.2);
+    }
+    .btn-register {
+        width: 100%;
+        background: #F5C542;
+        color: #2C3E50;
+        border: none;
+        padding: 0.85rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top: 0.5rem;
+    }
+    .btn-register:hover {
+        background: #e0b02a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(245,197,66,0.3);
+    }
+    .login-link {
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+    .login-link a {
+        color: #F5C542;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+</style>
 {% endblock %}

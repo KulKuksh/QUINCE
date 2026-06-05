@@ -13,7 +13,7 @@ def home(request):
 
 def menu(request):
     categories = Category.objects.all()
-    dishes = Dish.objects.filter(is_available=True)
+    dishes = Dish.objects.filter(is_available=True).select_related('category')
     return render(request, 'main/menu.html', {'categories': categories, 'dishes': dishes})
 
 def dish_detail(request, slug):

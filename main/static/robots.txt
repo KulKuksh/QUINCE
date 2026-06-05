@@ -3,4 +3,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /cart/
 Disallow: /checkout/
-Sitemap: https://quince.ru/sitemap.xml
+Disallow: /order-history/
+Disallow: /add-review/
+Sitemap: http://127.0.0.1:8000/sitemap.xml

@@ -14,8 +14,16 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--white);
     color: var(--text-dark);
-    background-image: radial-gradient(var(--border-light) 1.2px, transparent 1.2px);
-    background-size: 24px 24px;
+    /* НОВЫЙ ФОН: горошек из синих, жёлтых и серых точек */
+    background-image: radial-gradient(circle at 20% 40%, rgba(135, 206, 250, 0.4) 1.5%, transparent 1.5%),
+                      radial-gradient(circle at 80% 70%, rgba(245, 197, 66, 0.45) 2%, transparent 2%),
+                      radial-gradient(circle at 40% 85%, rgba(108, 117, 125, 0.3) 1.2%, transparent 1.2%),
+                      radial-gradient(circle at 95% 15%, rgba(135, 206, 250, 0.35) 1.8%, transparent 1.8%),
+                      radial-gradient(circle at 10% 95%, rgba(245, 197, 66, 0.4) 2.2%, transparent 2.2%),
+                      radial-gradient(circle at 60% 30%, rgba(108, 117, 125, 0.25) 1%, transparent 1%);
+    background-size: 180px 180px;
+    background-position: 0 0, 30px 35px, 15px 20px, 45px 50px, 20px 25px, 10px 15px;
+    background-repeat: repeat;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -46,12 +54,12 @@ main {
     font-size: 1.8rem;
     font-weight: 700;
     text-decoration: none;
-    color: #2C3E50;   /* тёмный цвет букв */
+    color: #2C3E50;
     display: inline-flex;
     align-items: center;
 }
 .yellow-dot {
-    color: #F5C542;   /* жёлтый цвет точки */
+    color: #F5C542;
     font-size: 2rem;
     display: inline-block;
     line-height: 1;
@@ -414,7 +422,7 @@ html, body {
     max-width: 350px;
     word-wrap: break-word;
     transition: opacity 0.3s ease;
-    border-left: 4px solid #F5C542;  /* жёлтая полоса, цвет точки на логотипе */
+    border-left: 4px solid #F5C542;
     color: #2C3E50;
 }
 /* Страница отзывов */

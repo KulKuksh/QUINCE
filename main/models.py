@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.text import slugify
+from django.urls import reverse
 
 class User(AbstractUser):
     ROLE_CHOICES = (
@@ -24,6 +25,11 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+       return reverse('menu') + f'?category={self.slug}' 
+    
+    
 
 class Dish(models.Model):
     name = models.CharField(max_length=200)
@@ -31,6 +37,8 @@ class Dish(models.Model):
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='dishes')
+    composition = models.TextField('Состав блюда', blank=True, help_text='Перечислите ингредиенты')
+    nutrition = models.CharField('КБЖУ', max_length=100, blank=True, help_text='Калории, белки, жиры, углеводы')
     image = models.ImageField(upload_to='dishes/', blank=True, null=True)
     is_available = models.BooleanField(default=True)
 
@@ -41,6 +49,10 @@ class Dish(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.price} руб."
+    
+    def get_absolute_url(self):
+       return reverse('dish_detail', args=[self.slug])
+
 
 class CartItem(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='cart_items')
