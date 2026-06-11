@@ -27,4 +27,5 @@ urlpatterns = [
     path('reviews/', views.reviews, name='reviews'),
     path('profile/', views.profile, name='profile'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    path('contacts/', views.contacts, name='contacts'),
 ]

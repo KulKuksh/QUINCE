@@ -1,0 +1,199 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="contacts-page">
+    <div class="contacts-header">
+        <h1>Контакты</h1>
+        <p class="contacts-subtitle">Свяжитесь с нами любым удобным способом</p>
+    </div>
+
+    <div class="contacts-grid">
+        <!-- Карточка с адресом -->
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <h3>Наш адрес</h3>
+            <p>г. Новосибирск, ул. Сенная, 15</p>
+            <p class="small">(ЖК «Сенной квартал», вход с центрального фасада)</p>
+        </div>
+
+        <!-- Карточка с телефоном -->
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="bi bi-telephone-fill"></i>
+            </div>
+            <h3>Телефон</h3>
+            <p><a href="tel:+73831234567">+7 (383) 123-45-67</a></p>
+            <p class="small">Ежедневно с 12:00 до 23:00</p>
+        </div>
+
+        <!-- Карточка для бронирования / вопросов -->
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="bi bi-calendar-check-fill"></i>
+            </div>
+            <h3>Бронирование столиков</h3>
+            <p>По телефону <a href="tel:+73831234567">+7 (383) 123-45-67</a></p>
+            <p class="small">Желательно за 2–3 часа до визита</p>
+        </div>
+
+        <!-- Карточка для доставки и вопросов -->
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="bi bi-truck"></i>
+            </div>
+            <h3>Доставка</h3>
+            <p>По тому же телефону или через сайт</p>
+            <p class="small">Бесплатно при заказе от 1200 ₽ в пределах ЖК</p>
+        </div>
+    </div>
+
+    <!-- Блок с дополнительной информацией и картой (заглушка) -->
+    <div class="contacts-info">
+        <div class="info-text">
+            <h3>Остались вопросы?</h3>
+            <p>По всем вопросам (кейтеринг, корпоративы, обратная связь) обращайтесь по телефону <strong>+7 (383) 123-45-67</strong> или оставьте заявку через форму обратной связи (скоро).</p>
+            <p>Мы также в социальных сетях:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" class="social-link"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="#" target="_blank" class="social-link"><i class="bi bi-telegram"></i> Telegram</a>
+                <a href="#" target="_blank" class="social-link"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="info-map">
+            <!-- Заглушка карты – можно позже встроить Яндекс.Карты или Google Maps -->
+            <div class="map-placeholder">
+                <i class="bi bi-map"></i>
+                <p>Карта проезда появится здесь</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .contacts-page {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 24px;
+    }
+    .contacts-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .contacts-header h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #2C3E50;
+    }
+    .contacts-subtitle {
+        color: #6c757d;
+        font-size: 1rem;
+    }
+    .contacts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    .contact-card {
+        background: #FFFFFF;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+    }
+    .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .contact-icon {
+        font-size: 2.5rem;
+        color: #F5C542;
+        margin-bottom: 0.75rem;
+    }
+    .contact-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #2C3E50;
+    }
+    .contact-card p {
+        margin: 0.25rem 0;
+        color: #4a5b6e;
+        font-size: 0.95rem;
+    }
+    .contact-card a {
+        color: #F5C542;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .contact-card a:hover {
+        text-decoration: underline;
+    }
+    .small {
+        font-size: 0.8rem;
+        color: #6c757d;
+    }
+    .contacts-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background: #FFFFFF;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .info-text {
+        flex: 2;
+        min-width: 200px;
+    }
+    .info-text h3 {
+        margin-bottom: 0.5rem;
+    }
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    .social-link {
+        background: #f8f9fa;
+        padding: 0.4rem 1rem;
+        border-radius: 2rem;
+        color: #2C3E50;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: 0.2s;
+    }
+    .social-link:hover {
+        background: #F5C542;
+        color: #2C3E50;
+    }
+    .info-map {
+        flex: 1.5;
+        min-width: 200px;
+    }
+    .map-placeholder {
+        background: #e9ecef;
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+    .map-placeholder i {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+    @media (max-width: 768px) {
+        .contacts-grid {
+            grid-template-columns: 1fr;
+        }
+        .contacts-info {
+            flex-direction: column;
+        }
+    }
+</style>
+{% endblock %}

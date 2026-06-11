@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Category, Dish, CartItem, Order, OrderItem, Review
 from .forms import UserRegisterForm
+from django.core.paginator import Paginator
+
 
 
 def home(request):
@@ -13,7 +15,10 @@ def home(request):
 
 def menu(request):
     categories = Category.objects.all()
-    dishes = Dish.objects.filter(is_available=True).select_related('category')
+    dishes_list = Dish.objects.filter(is_available=True).select_related('category')
+    paginator = Paginator(dishes_list, 12)
+    page_number = request.GET.get('page')
+    dishes = paginator.get_page(page_number)
     return render(request, 'main/menu.html', {'categories': categories, 'dishes': dishes})
 
 def dish_detail(request, slug):
@@ -146,3 +151,6 @@ def profile(request):
     orders = Order.objects.filter(user=user).order_by('-created_at')
     reviews = Review.objects.filter(user=user).order_by('-created_at')
     return render(request, 'main/profile.html', {'orders': orders, 'reviews': reviews})
+
+def contacts(request):
+    return render(request, 'main/contacts.html')

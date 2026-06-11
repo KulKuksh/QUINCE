@@ -184,3 +184,148 @@ WARNING 2026-06-11 17:43:13,109 log Not Found: /accounts/login/
 WARNING 2026-06-11 17:43:16,355 log Not Found: /accounts/login/
 WARNING 2026-06-11 17:43:17,440 log Not Found: /accounts/login/
 WARNING 2026-06-11 17:43:27,218 log Not Found: /accounts/login/
+INFO 2026-06-11 18:24:26,465 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 18:24:32,104 log "GET /cart/ HTTP/1.1" 200 3562
+INFO 2026-06-11 18:24:32,136 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+WARNING 2026-06-11 18:24:32,351 log Not Found: /favicon.ico
+WARNING 2026-06-11 18:24:32,352 log "GET /favicon.ico HTTP/1.1" 404 6869
+INFO 2026-06-11 18:24:34,443 log "GET /menu/ HTTP/1.1" 200 9353
+WARNING 2026-06-11 18:24:34,484 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 18:24:34,511 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 18:24:51,888 log "GET / HTTP/1.1" 200 4029
+INFO 2026-06-11 18:24:56,513 log "GET /menu/ HTTP/1.1" 200 9353
+WARNING 2026-06-11 18:24:56,537 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 18:24:56,563 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 18:24:58,369 log "GET /menu/ HTTP/1.1" 200 9353
+WARNING 2026-06-11 18:24:58,437 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 18:24:58,459 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 18:24:59,411 log "GET /cart/ HTTP/1.1" 200 3562
+INFO 2026-06-11 18:25:00,671 log "GET /reviews/ HTTP/1.1" 200 5317
+INFO 2026-06-11 18:26:34,568 log "GET /cart/ HTTP/1.1" 200 3562
+INFO 2026-06-11 18:26:38,754 log "GET /reviews/ HTTP/1.1" 200 5317
+INFO 2026-06-11 18:26:40,280 log "GET / HTTP/1.1" 200 4029
+INFO 2026-06-11 18:35:57,891 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 18:36:02,614 log "GET / HTTP/1.1" 200 4029
+INFO 2026-06-11 18:36:02,730 log "GET /static/main/css/style.css HTTP/1.1" 200 10931
+WARNING 2026-06-11 18:36:03,226 log Not Found: /favicon.ico
+WARNING 2026-06-11 18:36:03,227 log "GET /favicon.ico HTTP/1.1" 404 6869
+INFO 2026-06-11 18:36:05,433 log "GET /menu/ HTTP/1.1" 200 9353
+WARNING 2026-06-11 18:36:05,471 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 18:36:05,502 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 18:36:06,681 log "GET /add-to-cart/1/ HTTP/1.1" 302 0
+INFO 2026-06-11 18:36:06,702 log "GET /menu/ HTTP/1.1" 200 9493
+WARNING 2026-06-11 18:36:06,748 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 18:36:08,096 log "GET /cart/ HTTP/1.1" 200 5442
+INFO 2026-06-11 18:36:09,322 log "GET /checkout/ HTTP/1.1" 200 5039
+INFO 2026-06-11 18:36:16,367 log "POST /checkout/ HTTP/1.1" 302 0
+INFO 2026-06-11 18:36:16,435 log "GET /order-history/ HTTP/1.1" 200 11960
+INFO 2026-06-11 18:38:17,339 log "GET /order-history/ HTTP/1.1" 200 11265
+INFO 2026-06-11 18:38:17,371 log "GET /static/main/css/style.css HTTP/1.1" 200 10931
+INFO 2026-06-11 18:38:17,557 log "GET /order-history/ HTTP/1.1" 200 11265
+INFO 2026-06-11 18:38:17,584 log "GET /static/main/css/style.css HTTP/1.1" 200 10931
+WARNING 2026-06-11 18:38:17,849 log Not Found: /favicon.ico
+WARNING 2026-06-11 18:38:17,850 log "GET /favicon.ico HTTP/1.1" 404 6869
+INFO 2026-06-11 21:00:08,026 log "GET / HTTP/1.1" 200 4029
+INFO 2026-06-11 21:00:12,899 log "GET /admin/ HTTP/1.1" 200 13752
+INFO 2026-06-11 21:00:12,998 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:12,999 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:13,011 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:13,029 log "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:13,030 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:13,031 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:13,046 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:13,067 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:13,068 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:14,962 log "GET /admin/ HTTP/1.1" 200 13752
+INFO 2026-06-11 21:00:24,167 log "GET /admin/main/orderitem/ HTTP/1.1" 200 12940
+INFO 2026-06-11 21:00:24,213 log "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,216 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,226 log "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,227 log "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,229 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,234 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,234 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,255 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:00:24,295 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,296 log "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,372 log "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:24,414 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:27,151 log "GET /admin/main/orderitem/4/change/ HTTP/1.1" 200 15743
+INFO 2026-06-11 21:00:27,190 log "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:27,193 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:27,199 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:00:27,208 log "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:27,216 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:27,223 log "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:36,435 log "GET /admin/main/order/ HTTP/1.1" 200 12350
+INFO 2026-06-11 21:00:36,477 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:00:38,320 log "GET /admin/main/order/3/change/ HTTP/1.1" 200 16705
+INFO 2026-06-11 21:00:38,367 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:00:45,839 log "POST /admin/main/order/3/change/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:00:45,878 log "GET /admin/main/order/ HTTP/1.1" 200 12563
+INFO 2026-06-11 21:00:45,922 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:00:45,962 log "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-06-11 21:00:52,678 log "GET /admin/ HTTP/1.1" 200 13758
+INFO 2026-06-11 21:00:53,090 log "GET / HTTP/1.1" 200 4029
+INFO 2026-06-11 21:00:56,172 log "GET /cart/ HTTP/1.1" 200 3562
+INFO 2026-06-11 21:00:57,435 log "GET /reviews/ HTTP/1.1" 200 5317
+INFO 2026-06-11 21:00:59,693 log "GET /menu/ HTTP/1.1" 200 9353
+WARNING 2026-06-11 21:00:59,736 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:00:59,771 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:01:02,112 log "GET /add-to-cart/1/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:01:02,132 log "GET /menu/ HTTP/1.1" 200 9493
+WARNING 2026-06-11 21:01:02,187 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:01:04,230 log "GET /cart/ HTTP/1.1" 200 5444
+INFO 2026-06-11 21:01:05,506 log "GET /checkout/ HTTP/1.1" 200 5039
+INFO 2026-06-11 21:01:10,728 log "POST /checkout/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:01:10,763 log "GET /order-history/ HTTP/1.1" 200 12945
+INFO 2026-06-11 21:01:24,249 log "GET / HTTP/1.1" 200 4029
+INFO 2026-06-11 21:01:35,298 log "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:01:35,315 log "GET / HTTP/1.1" 200 3917
+INFO 2026-06-11 21:01:37,618 log "GET /register/ HTTP/1.1" 200 7402
+INFO 2026-06-11 21:01:44,877 log "GET /login/ HTTP/1.1" 200 4041
+INFO 2026-06-11 21:01:46,811 log "GET /register/ HTTP/1.1" 200 7402
+INFO 2026-06-11 21:01:51,896 log "GET /menu/ HTTP/1.1" 200 9327
+WARNING 2026-06-11 21:01:51,947 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:01:51,988 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:01:53,491 log "GET / HTTP/1.1" 200 3917
+INFO 2026-06-11 21:01:54,639 log "GET /menu/ HTTP/1.1" 200 9327
+WARNING 2026-06-11 21:01:54,673 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:01:54,709 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:01:55,567 log "GET / HTTP/1.1" 200 3917
+INFO 2026-06-11 21:01:57,167 log "GET /menu/ HTTP/1.1" 200 9327
+WARNING 2026-06-11 21:01:57,200 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:01:57,237 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:01:58,739 log "GET /login/?next=/menu/ HTTP/1.1" 200 4053
+INFO 2026-06-11 21:02:12,820 log "GET /menu/ HTTP/1.1" 200 9327
+WARNING 2026-06-11 21:02:12,864 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:02:12,882 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:09:25,663 autoreload C:\Users\л\Desktop\Курсовая\quince\QUINCE\main\urls.py changed, reloading.
+INFO 2026-06-11 21:09:27,262 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 21:09:41,181 autoreload C:\Users\л\Desktop\Курсовая\quince\QUINCE\main\views.py changed, reloading.
+INFO 2026-06-11 21:09:42,157 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 21:09:48,951 log "GET /menu/ HTTP/1.1" 200 9379
+WARNING 2026-06-11 21:09:48,998 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:09:49,100 log "GET /static/main/css/style.css HTTP/1.1" 200 10931
+WARNING 2026-06-11 21:09:49,309 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:09:50,131 log Not Found: /favicon.ico
+WARNING 2026-06-11 21:09:50,132 log "GET /favicon.ico HTTP/1.1" 404 7128
+INFO 2026-06-11 21:09:52,236 log "GET /contacts/ HTTP/1.1" 200 9587
+INFO 2026-06-11 21:10:26,511 log "GET /contacts/ HTTP/1.1" 200 9587
+INFO 2026-06-11 21:12:59,603 log "GET /contacts/ HTTP/1.1" 200 9587
+INFO 2026-06-11 21:12:59,655 log "GET /static/main/css/style.css HTTP/1.1" 200 11078
+WARNING 2026-06-11 21:13:00,039 log Not Found: /favicon.ico
+WARNING 2026-06-11 21:13:00,040 log "GET /favicon.ico HTTP/1.1" 404 7128
+INFO 2026-06-11 21:13:10,186 log "GET / HTTP/1.1" 200 3969
+INFO 2026-06-11 21:13:10,221 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:13:16,128 log "GET /menu/ HTTP/1.1" 200 9379
+INFO 2026-06-11 21:13:16,219 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+WARNING 2026-06-11 21:13:16,222 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:13:16,267 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:13:19,794 log "GET /login/ HTTP/1.1" 200 4093
+INFO 2026-06-11 21:13:19,830 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:13:23,182 log "GET / HTTP/1.1" 200 3969
+INFO 2026-06-11 21:13:23,210 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:13:24,202 log "GET /menu/ HTTP/1.1" 200 9379
+WARNING 2026-06-11 21:13:24,236 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+WARNING 2026-06-11 21:13:24,274 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895

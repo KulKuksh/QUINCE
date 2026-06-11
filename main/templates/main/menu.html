@@ -45,6 +45,17 @@
         {% endfor %}
     </div>
 </div>
+<div class="pagination" style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem;">
+    {% if dishes.has_previous %}
+        <a href="?page=1" class="cart-btn">&laquo; Первая</a>
+        <a href="?page={{ dishes.previous_page_number }}" class="cart-btn">Предыдущая</a>
+    {% endif %}
+    <span class="current" style="padding: 0.3rem 1rem;">Страница {{ dishes.number }} из {{ dishes.paginator.num_pages }}</span>
+    {% if dishes.has_next %}
+        <a href="?page={{ dishes.next_page_number }}" class="cart-btn">Следующая</a>
+        <a href="?page={{ dishes.paginator.num_pages }}" class="cart-btn">Последняя &raquo;</a>
+    {% endif %}
+</div>
 
 <style>
     .menu-page {

@@ -30,7 +30,7 @@
                     <a href="{% url 'cart' %}">Корзина</a>
                     <a href="{% url 'reviews' %}">Отзывы</a>
                 {% endif %}
-                <a href="#">Контакты</a>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
             </div>
             <div class="auth-links">
                 {% if user.is_authenticated %}

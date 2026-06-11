@@ -1,20 +1,176 @@
 {% extends 'main/base.html' %}
+{% load static %}
 {% block content %}
-<div class="container py-4">
-    <h1>Мои заказы</h1>
-    {% if orders %}
-        {% for order in orders %}
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5>Заказ №{{ order.id }} от {{ order.created_at|date:"d.m.Y H:i" }}</h5>
-                    <p>Статус: <strong>{{ order.get_status_display }}</strong></p>
-                    <p>Сумма: {{ order.total_amount }} ₽ (доставка {{ order.delivery_cost }} ₽)</p>
-                    <p>Адрес: {{ order.address }}</p>
+<div class="orders-page">
+    <div class="orders-header">
+        <h1>Мои заказы</h1>
+        <p class="orders-subtitle">История ваших заказов</p>
+    </div>
+
+    <div class="orders-container">
+        {% if orders %}
+            {% for order in orders %}
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-number">Заказ №{{ order.id }}</span>
+                    <span class="order-date">{{ order.created_at|date:"d.m.Y H:i" }}</span>
                 </div>
+                <div class="order-status">
+                    Статус: <span class="status-badge status-{{ order.status }}">{{ order.get_status_display }}</span>
+                </div>
+                <div class="order-details">
+                    <div class="order-info">
+                        <p><strong>Адрес доставки:</strong> {{ order.address }}</p>
+                        <p><strong>Телефон:</strong> {{ order.phone }}</p>
+                        <p><strong>Комментарий:</strong> {{ order.comment|default:"—" }}</p>
+                    </div>
+                    <div class="order-items">
+                        <strong>Состав заказа:</strong>
+                        <ul>
+                            {% for item in order.items.all %}
+                                <li>{{ item.dish.name }} x{{ item.quantity }} = {{ item.price|floatformat:0 }} ₽</li>
+                            {% empty %}
+                                <li>Нет позиций</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="order-total">
+                        <span>Сумма: <strong>{{ order.total_amount|floatformat:0 }} ₽</strong></span>
+                        <span>Доставка: <strong>{{ order.delivery_cost|floatformat:0 }} ₽</strong></span>
+                    </div>
+                </div>
+                
             </div>
-        {% endfor %}
-    {% else %}
-        <p>У вас ещё нет заказов.</p>
-    {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="empty-orders">
+                <p>У вас пока нет заказов.</p>
+                <a href="{% url 'menu' %}" class="btn-book">Перейти в меню</a>
+            </div>
+        {% endif %}
+    </div>
 </div>
+
+<style>
+    .orders-page {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 0 24px;
+    }
+    .orders-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .orders-header h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #2C3E50;
+    }
+    .orders-subtitle {
+        color: #6c757d;
+        font-size: 1rem;
+    }
+    .orders-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .order-card {
+        background: #FFFFFF;
+        border-radius: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+    .order-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .order-header {
+        background: #f8f9fa;
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .order-number {
+        font-weight: bold;
+        color: #2C3E50;
+    }
+    .order-date {
+        color: #6c757d;
+        font-size: 0.85rem;
+    }
+    .order-status {
+        padding: 0.75rem 1.5rem;
+        background: #FFFFFF;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 0.9rem;
+    }
+    .status-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .status-принят { background: #A8D0E6; color: #2C3E50; }
+    .status-готовится { background: #F5C542; color: #2C3E50; }
+    .status-в_пути { background: #F5C542; color: #2C3E50; }
+    .status-доставлен { background: #6c757d; color: white; }
+    .status-отменён { background: #dc3545; color: white; }
+    .order-details {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .order-info p {
+        margin: 0.25rem 0;
+        font-size: 0.9rem;
+    }
+    .order-items ul {
+        margin: 0.5rem 0 0 1rem;
+        padding: 0;
+    }
+    .order-items li {
+        font-size: 0.9rem;
+        color: #4a5b6e;
+    }
+    .order-total {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        border-top: 1px solid #e9ecef;
+        font-weight: bold;
+    }
+    .order-actions {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+    .btn-cancel-order {
+        background: transparent;
+        border: 1px solid #dc3545;
+        color: #dc3545;
+        padding: 0.4rem 1rem;
+        border-radius: 1.5rem;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: 0.2s;
+    }
+    .btn-cancel-order:hover {
+        background: #dc3545;
+        color: white;
+    }
+    .empty-orders {
+        text-align: center;
+        padding: 3rem;
+        background: #FFFFFF;
+        border-radius: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .empty-orders p {
+        margin-bottom: 1rem;
+        color: #6c757d;
+    }
+</style>
 {% endblock %}
