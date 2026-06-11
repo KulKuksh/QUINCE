@@ -8,13 +8,13 @@
         <div class="menu-filters">
             <button class="filter-btn active" data-category="all">Все</button>
             {% for cat in categories %}
-                <button class="filter-btn" data-category="{{ cat.slug }}">{{ cat.name }}</button>
+                <button class="filter-btn" data-category="{{ cat.id }}">{{ cat.name }}</button>
             {% endfor %}
         </div>
     </div>
     <div class="menu-grid" id="dishes-container">
         {% for dish in dishes %}
-            <div class="dish-card" data-category="{{ dish.category.slug }}">
+            <div class="dish-card" data-category="{{ dish.category.id }}">
                 <div class="dish-img">
                     {% if dish.image %}
                         <img src="{{ dish.image.url }}" alt="{{ dish.name }}">

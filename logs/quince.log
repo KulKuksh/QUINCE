@@ -329,3 +329,299 @@ INFO 2026-06-11 21:13:23,210 log "GET /static/main/css/style.css HTTP/1.1" 304 0
 INFO 2026-06-11 21:13:24,202 log "GET /menu/ HTTP/1.1" 200 9379
 WARNING 2026-06-11 21:13:24,236 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
 WARNING 2026-06-11 21:13:24,274 log "GET /static/main/images/placeholder.jpg HTTP/1.1" 404 1895
+INFO 2026-06-11 21:20:06,767 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 21:20:07,062 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:07,185 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4080
+INFO 2026-06-11 21:20:07,401 log "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-06-11 21:20:13,798 log "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:13,841 log "GET /admin/ HTTP/1.1" 200 13758
+INFO 2026-06-11 21:20:15,534 log "GET /admin/main/cartitem/ HTTP/1.1" 200 10508
+INFO 2026-06-11 21:20:15,583 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:17,393 log "GET /admin/main/category/ HTTP/1.1" 200 11784
+INFO 2026-06-11 21:20:17,445 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:23,052 log "GET /admin/main/category/1/change/ HTTP/1.1" 200 11961
+INFO 2026-06-11 21:20:23,108 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:24,715 log "GET /admin/main/category/1/delete/ HTTP/1.1" 200 11161
+INFO 2026-06-11 21:20:24,762 log "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2026-06-11 21:20:26,269 log "POST /admin/main/category/1/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:26,306 log "GET /admin/main/category/ HTTP/1.1" 200 10669
+INFO 2026-06-11 21:20:26,355 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:28,021 log "GET /admin/main/dish/ HTTP/1.1" 200 10470
+INFO 2026-06-11 21:20:28,063 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:29,058 log "GET /admin/main/orderitem/ HTTP/1.1" 200 10516
+INFO 2026-06-11 21:20:29,099 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:30,128 log "GET /admin/main/order/ HTTP/1.1" 200 12642
+INFO 2026-06-11 21:20:30,173 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:32,733 log "GET /admin/main/order/4/change/ HTTP/1.1" 200 16769
+INFO 2026-06-11 21:20:32,777 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:34,205 log "GET /admin/main/order/4/delete/ HTTP/1.1" 200 10215
+INFO 2026-06-11 21:20:36,117 log "POST /admin/main/order/4/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:36,158 log "GET /admin/main/order/ HTTP/1.1" 200 12521
+INFO 2026-06-11 21:20:36,203 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:38,403 log "GET /admin/main/order/3/change/ HTTP/1.1" 200 16705
+INFO 2026-06-11 21:20:38,451 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:40,218 log "GET /admin/main/order/3/delete/ HTTP/1.1" 200 10215
+INFO 2026-06-11 21:20:41,957 log "POST /admin/main/order/3/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:41,996 log "GET /admin/main/order/ HTTP/1.1" 200 12229
+INFO 2026-06-11 21:20:42,040 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:43,457 log "GET /admin/main/order/2/change/ HTTP/1.1" 200 16705
+INFO 2026-06-11 21:20:43,501 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:45,075 log "GET /admin/main/order/2/delete/ HTTP/1.1" 200 10215
+INFO 2026-06-11 21:20:46,792 log "POST /admin/main/order/2/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:46,830 log "GET /admin/main/order/ HTTP/1.1" 200 11936
+INFO 2026-06-11 21:20:46,871 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:48,039 log "GET /admin/main/order/1/change/ HTTP/1.1" 200 16704
+INFO 2026-06-11 21:20:48,085 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:49,244 log "GET /admin/main/order/1/delete/ HTTP/1.1" 200 10215
+INFO 2026-06-11 21:20:50,821 log "POST /admin/main/order/1/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:50,855 log "GET /admin/main/order/ HTTP/1.1" 200 10649
+INFO 2026-06-11 21:20:50,896 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:51,885 log "GET /admin/main/review/ HTTP/1.1" 200 12768
+INFO 2026-06-11 21:20:51,928 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:53,475 log "GET /admin/main/review/4/change/ HTTP/1.1" 200 14676
+INFO 2026-06-11 21:20:53,516 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:54,681 log "GET /admin/main/review/4/delete/ HTTP/1.1" 200 10265
+INFO 2026-06-11 21:20:55,922 log "POST /admin/main/review/4/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:55,968 log "GET /admin/main/review/ HTTP/1.1" 200 12633
+INFO 2026-06-11 21:20:56,014 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:57,112 log "GET /admin/main/review/3/change/ HTTP/1.1" 200 14675
+INFO 2026-06-11 21:20:57,163 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:20:58,347 log "GET /admin/main/review/3/delete/ HTTP/1.1" 200 10265
+INFO 2026-06-11 21:20:59,755 log "POST /admin/main/review/3/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:20:59,819 log "GET /admin/main/review/ HTTP/1.1" 200 12312
+INFO 2026-06-11 21:20:59,862 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:00,816 log "GET /admin/main/review/2/change/ HTTP/1.1" 200 14674
+INFO 2026-06-11 21:21:00,858 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:03,884 log "GET /admin/main/review/2/delete/ HTTP/1.1" 200 10265
+INFO 2026-06-11 21:21:05,502 log "POST /admin/main/review/2/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:21:05,532 log "GET /admin/main/review/ HTTP/1.1" 200 11990
+INFO 2026-06-11 21:21:05,570 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:07,419 log "GET /admin/main/review/1/change/ HTTP/1.1" 200 14677
+INFO 2026-06-11 21:21:07,461 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:08,679 log "GET /admin/main/review/1/delete/ HTTP/1.1" 200 10265
+INFO 2026-06-11 21:21:10,070 log "POST /admin/main/review/1/delete/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:21:10,104 log "GET /admin/main/review/ HTTP/1.1" 200 10672
+INFO 2026-06-11 21:21:10,147 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:11,411 log "GET /admin/main/user/ HTTP/1.1" 200 11716
+INFO 2026-06-11 21:21:11,451 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:12,728 log "GET /admin/main/user/1/change/ HTTP/1.1" 200 26633
+INFO 2026-06-11 21:21:12,774 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:12,795 log "GET /static/admin/js/calendar.js HTTP/1.1" 200 9159
+INFO 2026-06-11 21:21:12,815 log "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19698
+INFO 2026-06-11 21:21:12,915 log "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 805
+INFO 2026-06-11 21:21:12,916 log "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1112
+INFO 2026-06-11 21:21:30,488 log "POST /admin/main/user/1/change/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:21:30,521 log "GET /admin/main/user/ HTTP/1.1" 200 11908
+INFO 2026-06-11 21:21:30,566 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:21:35,671 log "GET /admin/ HTTP/1.1" 200 13278
+INFO 2026-06-11 21:21:35,750 log "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 689
+INFO 2026-06-11 21:21:36,487 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 21:21:36,711 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:21:39,837 log "GET /menu/ HTTP/1.1" 200 7446
+INFO 2026-06-11 21:21:41,243 log "GET /cart/ HTTP/1.1" 200 3614
+INFO 2026-06-11 21:21:41,940 log "GET /reviews/ HTTP/1.1" 200 3830
+INFO 2026-06-11 21:21:42,926 log "GET /contacts/ HTTP/1.1" 200 9699
+INFO 2026-06-11 21:21:44,153 log "GET /reviews/ HTTP/1.1" 200 3830
+INFO 2026-06-11 21:21:45,171 log "GET /contacts/ HTTP/1.1" 200 9699
+INFO 2026-06-11 21:21:48,047 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 21:21:55,179 log "GET /admin/ HTTP/1.1" 200 13278
+INFO 2026-06-11 21:21:56,965 log "GET /admin/ HTTP/1.1" 200 13278
+INFO 2026-06-11 21:22:01,888 log "GET /admin/main/category/ HTTP/1.1" 200 10502
+INFO 2026-06-11 21:22:01,934 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:23:06,801 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:23:06,847 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:23:20,144 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:23:20,171 log "GET /admin/main/category/ HTTP/1.1" 200 11994
+INFO 2026-06-11 21:23:20,213 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:23:22,077 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:23:22,118 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:23:57,660 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:23:57,691 log "GET /admin/main/category/ HTTP/1.1" 200 12252
+INFO 2026-06-11 21:23:57,732 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:23:59,250 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:23:59,292 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:11,681 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:24:11,718 log "GET /admin/main/category/ HTTP/1.1" 200 12517
+INFO 2026-06-11 21:24:11,759 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:13,595 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:24:13,641 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:25,694 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:24:25,734 log "GET /admin/main/category/ HTTP/1.1" 200 12833
+INFO 2026-06-11 21:24:25,780 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:32,232 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:24:32,282 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:44,536 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:24:44,586 log "GET /admin/main/category/ HTTP/1.1" 200 13087
+INFO 2026-06-11 21:24:44,626 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:47,935 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:24:47,977 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:57,778 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:24:57,813 log "GET /admin/main/category/ HTTP/1.1" 200 13362
+INFO 2026-06-11 21:24:57,854 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:24:59,546 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:24:59,598 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:25:19,260 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:25:19,290 log "GET /admin/main/category/ HTTP/1.1" 200 13641
+INFO 2026-06-11 21:25:19,330 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:25:24,623 log "GET /admin/main/category/add/ HTTP/1.1" 200 11672
+INFO 2026-06-11 21:25:24,664 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:25:41,747 log "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 21:25:41,782 log "GET /admin/main/category/ HTTP/1.1" 200 13918
+INFO 2026-06-11 21:25:41,821 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:25:43,481 log "GET /admin/main/dish/ HTTP/1.1" 200 10470
+INFO 2026-06-11 21:25:43,524 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:25:47,020 log "GET /admin/main/dish/add/ HTTP/1.1" 200 17594
+INFO 2026-06-11 21:25:47,062 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:31:03,842 autoreload C:\Users\л\Desktop\Курсовая\quince\QUINCE\main\urls.py changed, reloading.
+INFO 2026-06-11 21:31:04,810 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 21:39:54,187 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 21:40:01,489 log "GET /admin/main/dish/add/ HTTP/1.1" 200 16968
+INFO 2026-06-11 21:40:01,536 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:40:08,299 log "GET /admin/ HTTP/1.1" 200 13504
+INFO 2026-06-11 21:40:08,763 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 21:40:08,972 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+INFO 2026-06-11 21:40:11,064 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 21:40:11,188 log "GET /static/main/css/style.css HTTP/1.1" 200 11078
+WARNING 2026-06-11 21:40:11,909 log Not Found: /favicon.ico
+WARNING 2026-06-11 21:40:11,910 log "GET /favicon.ico HTTP/1.1" 404 6592
+INFO 2026-06-11 21:40:13,316 log "GET /menu/ HTTP/1.1" 200 8225
+INFO 2026-06-11 21:40:23,520 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 21:40:26,783 log "GET /admin/ HTTP/1.1" 200 13504
+INFO 2026-06-11 21:40:30,069 log "GET /admin/main/dish/ HTTP/1.1" 200 10470
+INFO 2026-06-11 21:40:30,117 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 21:40:32,306 log "GET /admin/main/dish/add/ HTTP/1.1" 200 16968
+INFO 2026-06-11 21:40:32,351 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2026-06-11 22:00:58,603 log Internal Server Error: /admin/main/dish/add/
+Traceback (most recent call last):
+  File "C:\pyton\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\contrib\admin\options.py", line 711, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\contrib\admin\sites.py", line 247, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\contrib\admin\options.py", line 1943, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\contrib\admin\options.py", line 1802, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\contrib\admin\options.py", line 1853, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\pyton\Lib\site-packages\django\contrib\admin\options.py", line 1273, in save_model
+    obj.save()
+  File "C:\pyton\Lib\site-packages\django\db\models\base.py", line 874, in save
+    self.save_base(
+  File "C:\pyton\Lib\site-packages\django\db\models\base.py", line 946, in save_base
+    pre_save.send(
+  File "C:\pyton\Lib\site-packages\django\dispatch\dispatcher.py", line 209, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\л\Desktop\Курсовая\quince\quince\main\signals.py", line 13, in dish_pre_save
+    if not instance.slug:
+           ^^^^^^^^^^^^^
+AttributeError: 'Dish' object has no attribute 'slug'
+ERROR 2026-06-11 22:00:58,616 log "POST /admin/main/dish/add/ HTTP/1.1" 500 151482
+INFO 2026-06-11 22:02:59,444 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 22:03:15,736 autoreload C:\Users\л\Desktop\Курсовая\quince\QUINCE\main\apps.py changed, reloading.
+INFO 2026-06-11 22:03:16,635 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 22:03:24,259 log "POST /admin/main/dish/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:03:24,387 log "GET /admin/main/dish/ HTTP/1.1" 200 12167
+INFO 2026-06-11 22:03:24,440 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 22:03:30,896 log "GET /admin/ HTTP/1.1" 200 13590
+INFO 2026-06-11 22:03:31,789 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 22:03:31,969 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+INFO 2026-06-11 22:03:34,409 log "GET /menu/ HTTP/1.1" 200 9341
+INFO 2026-06-11 22:03:34,566 log "GET /media/dishes/omlet-so-strachatelloj-i-tomatami-1000x940.jpg HTTP/1.1" 200 92856
+INFO 2026-06-11 22:03:57,060 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 22:03:58,173 log "GET /admin/ HTTP/1.1" 200 13590
+INFO 2026-06-11 22:04:00,576 log "GET /admin/ HTTP/1.1" 200 13590
+INFO 2026-06-11 22:04:04,804 log "GET /admin/main/dish/ HTTP/1.1" 200 11892
+INFO 2026-06-11 22:04:04,848 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 22:04:07,074 log "GET /admin/main/dish/add/ HTTP/1.1" 200 16968
+INFO 2026-06-11 22:04:07,117 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 22:08:29,153 log "POST /admin/main/dish/add/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:08:29,221 log "GET /admin/main/dish/ HTTP/1.1" 200 12534
+INFO 2026-06-11 22:08:29,266 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 22:08:33,513 log "GET /admin/main/dish/2/change/ HTTP/1.1" 200 17567
+INFO 2026-06-11 22:08:33,556 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 22:12:19,511 log "POST /admin/main/dish/2/change/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:12:19,582 log "GET /admin/main/dish/ HTTP/1.1" 200 12539
+INFO 2026-06-11 22:12:19,624 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-11 22:12:23,940 log "GET /admin/ HTTP/1.1" 200 13701
+INFO 2026-06-11 22:12:24,364 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 22:12:24,557 log "GET /static/main/css/style.css HTTP/1.1" 304 0
+INFO 2026-06-11 22:12:27,084 log "GET /menu/ HTTP/1.1" 200 10441
+INFO 2026-06-11 22:12:27,119 log "GET /media/dishes/omlet-so-strachatelloj-i-tomatami-1000x940.jpg HTTP/1.1" 304 0
+INFO 2026-06-11 22:12:27,121 log "GET /media/dishes/BEKON.PNG HTTP/1.1" 200 28960
+INFO 2026-06-11 22:14:54,235 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 22:14:57,798 log "GET /menu/ HTTP/1.1" 200 10441
+INFO 2026-06-11 22:14:57,828 log "GET /media/dishes/BEKON.PNG HTTP/1.1" 304 0
+INFO 2026-06-11 22:14:57,828 log "GET /media/dishes/omlet-so-strachatelloj-i-tomatami-1000x940.jpg HTTP/1.1" 304 0
+INFO 2026-06-11 22:15:06,971 log "GET /add-to-cart/2/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:15:06,993 log "GET /menu/ HTTP/1.1" 200 10596
+INFO 2026-06-11 22:15:08,466 log "GET /cart/ HTTP/1.1" 200 5511
+INFO 2026-06-11 22:15:11,917 log "POST /update-cart/11/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:15:11,942 log "GET /cart/ HTTP/1.1" 200 5511
+INFO 2026-06-11 22:15:19,987 log "GET /remove-from-cart/11/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:15:20,007 log "GET /cart/ HTTP/1.1" 200 3614
+INFO 2026-06-11 22:15:21,882 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 22:18:20,706 autoreload C:\Users\л\Desktop\Курсовая\quince\QUINCE\main\models.py changed, reloading.
+INFO 2026-06-11 22:18:21,637 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 22:21:22,487 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 22:21:29,649 log "GET / HTTP/1.1" 200 4081
+INFO 2026-06-11 22:21:29,766 log "GET /static/main/css/style.css HTTP/1.1" 200 11078
+WARNING 2026-06-11 22:21:30,523 log Not Found: /favicon.ico
+WARNING 2026-06-11 22:21:30,524 log "GET /favicon.ico HTTP/1.1" 404 6592
+INFO 2026-06-11 22:21:31,870 log "GET /cart/ HTTP/1.1" 200 3614
+INFO 2026-06-11 22:21:33,494 log "GET /menu/ HTTP/1.1" 200 10441
+INFO 2026-06-11 22:21:33,522 log "GET /media/dishes/BEKON.PNG HTTP/1.1" 304 0
+INFO 2026-06-11 22:21:33,523 log "GET /media/dishes/omlet-so-strachatelloj-i-tomatami-1000x940.jpg HTTP/1.1" 304 0
+INFO 2026-06-11 22:21:35,408 log "GET /add-to-cart/2/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:21:35,429 log "GET /menu/ HTTP/1.1" 200 10596
+INFO 2026-06-11 22:21:37,505 log "GET /cart/ HTTP/1.1" 200 5511
+INFO 2026-06-11 22:21:38,726 log "GET /checkout/ HTTP/1.1" 200 5518
+ERROR 2026-06-11 22:21:45,118 log Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\pyton\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\pyton\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\л\Desktop\Курсовая\quince\quince\main\views.py", line 84, in checkout
+    payment_method=payment_method,
+                  ^^^^^^^^^^^^^^
+NameError: name 'payment_method' is not defined
+ERROR 2026-06-11 22:21:45,127 log "POST /checkout/ HTTP/1.1" 500 81917
+INFO 2026-06-11 22:23:51,841 autoreload Watching for file changes with StatReloader
+INFO 2026-06-11 22:23:55,771 log "POST /checkout/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:23:55,835 log "GET /order-history/ HTTP/1.1" 200 8493
+INFO 2026-06-11 22:24:13,619 log "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-06-11 22:24:13,638 log "GET / HTTP/1.1" 200 3969

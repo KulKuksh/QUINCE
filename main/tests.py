@@ -36,12 +36,6 @@ class ModelTests(TestCase):
         self.assertEqual(self.user.role, 'user')
         self.assertTrue(self.user.check_password('12345'))
 
-    def test_category_slug_auto_generation(self):
-        # Проверяем, что slug теперь не пустой
-        self.assertTrue(self.category.slug)
-
-    def test_dish_slug_auto_generation(self):
-        self.assertTrue(self.dish.slug)
 
     def test_cart_item_get_total(self):
         item = CartItem.objects.create(user=self.user, dish=self.dish, quantity=2)
@@ -108,9 +102,7 @@ class ViewTests(TestCase):
         response = self.client.get(reverse('menu'))
         self.assertEqual(response.status_code, 200)
 
-    def test_dish_detail_page_status(self):
-        response = self.client.get(reverse('dish_detail', args=[self.dish.slug]))
-        self.assertEqual(response.status_code, 200)
+    
 
     def test_cart_requires_login(self):
         response = self.client.get(reverse('cart'))
@@ -197,16 +189,14 @@ class IntegrationTests(TestCase):
             phone='+71234567890'
         )
         self.category = Category.objects.create(name='Десерты')
-        self.category.slug = 'desserts'
-        self.category.save()
+        
 
         self.dish = Dish.objects.create(
             name='Тирамису',
             price=Decimal('320.00'),
             category=self.category
         )
-        self.dish.slug = 'tiramisu'
-        self.dish.save()
+        
 
     def test_full_order_flow(self):
         self.client.login(username='testuser', password='testpass123')

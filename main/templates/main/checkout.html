@@ -30,6 +30,17 @@ messages.success(request, f'Заказ №{order.id} успешно оформл
                 <label><input type="radio" name="delivery_type" value="pickup"> Самовывоз (бесплатно)</label>
             </div>
         </div>
+        <div class="form-group">
+    <label class="form-label">Способ оплаты</label>
+    <div class="radio-group">
+            <label class="me-3">
+                <input type="radio" name="payment_method" value="qr" checked> QR-код
+            </label>
+            <label>
+                <input type="radio" name="payment_method" value="cash"> Наличными
+            </label>
+        </div>
+    </div>
         <button type="submit" class="btn-submit">Подтвердить заказ</button>
     </form>
 </div>

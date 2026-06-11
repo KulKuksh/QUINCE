@@ -36,7 +36,9 @@
                     </div>
                     <div class="order-total">
                         <span>Сумма: <strong>{{ order.total_amount|floatformat:0 }} ₽</strong></span>
+                        <p><strong>Оплата:</strong> {{ order.get_payment_method_display }}</p>
                         <span>Доставка: <strong>{{ order.delivery_cost|floatformat:0 }} ₽</strong></span>
+                        
                     </div>
                 </div>
                 

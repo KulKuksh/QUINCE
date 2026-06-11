@@ -15,15 +15,13 @@ def home(request):
 
 def menu(request):
     categories = Category.objects.all()
-    dishes_list = Dish.objects.filter(is_available=True).select_related('category')
+    dishes_list = Dish.objects.filter(is_available=True).select_related('category').order_by('id')
     paginator = Paginator(dishes_list, 12)
     page_number = request.GET.get('page')
     dishes = paginator.get_page(page_number)
     return render(request, 'main/menu.html', {'categories': categories, 'dishes': dishes})
 
-def dish_detail(request, slug):
-    dish = get_object_or_404(Dish, slug=slug, is_available=True)
-    return render(request, 'main/dish_detail.html', {'dish': dish})
+
 
 @login_required
 def cart_view(request):
@@ -64,11 +62,13 @@ def checkout(request):
     if not cart_items:
         return redirect('menu')
     total = sum(item.get_total() for item in cart_items)
+    
     if request.method == 'POST':
         address = request.POST.get('address')
         phone = request.POST.get('phone')
         delivery_type = request.POST.get('delivery_type')
         comment = request.POST.get('comment', '')
+        payment_method = request.POST.get('payment_method')
         if delivery_type == 'pickup':
             delivery_cost = 0
         elif delivery_type == 'delivery_inside':
@@ -83,6 +83,7 @@ def checkout(request):
             address=address,
             phone=phone,
             comment=comment,
+            payment_method=payment_method, 
         )
         for item in cart_items:
             OrderItem.objects.create(order=order, dish=item.dish, quantity=item.quantity, price=item.dish.price)

@@ -16,20 +16,14 @@ class User(AbstractUser):
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=100, unique=True, blank=True)
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
+    
 
     def __str__(self):
         return self.name
 
 class Dish(models.Model):
     name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True, blank=True)
-    description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='dishes')
     image = models.ImageField(upload_to='dishes/', blank=True, null=True)
@@ -37,10 +31,7 @@ class Dish(models.Model):
     composition = models.TextField('Состав блюда', blank=True)
     nutrition = models.CharField('КБЖУ', max_length=100, blank=True)
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
+  
 
     class Meta:
         indexes = [
@@ -78,6 +69,12 @@ class Order(models.Model):
     address = models.CharField(max_length=300)
     phone = models.CharField(max_length=20)
     comment = models.TextField(blank=True)
+
+    PAYMENT_CHOICES = (
+    ('qr', 'QR-код'),
+    ('cash', 'Наличными'),
+    )
+    payment_method = models.CharField(max_length=10, choices=PAYMENT_CHOICES, default='qr')
 
     def __str__(self):
         return f"Заказ #{self.id} от {self.user.username}"
