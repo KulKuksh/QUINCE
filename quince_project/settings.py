@@ -124,7 +124,7 @@ import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = [BASE_DIR / 'static']
+#STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 SECURE_BROWSER_XSS_FILTER = True
@@ -132,6 +132,8 @@ X_FRAME_OPTIONS = 'DENY'
 SECURE_CONTENT_TYPE_NOSNIFF = True
 #CSRF_COOKIE_SECURE = True
 #SESSION_COOKIE_SECURE = True
+
+LOGIN_URL = '/login/'
 
 INTERNAL_IPS = ['127.0.0.1']
 
